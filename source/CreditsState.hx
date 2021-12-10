@@ -23,43 +23,23 @@ class CreditsState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<AttachedSprite> = [];
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
-	['BS Engine Mobile'],
-	['Matheus Silver',		'silver',		'Coder/Diretor do projeto',					'https://www.youtube.com/c/matheussilver',	'0xFFFFFFFF'],
-	['Bright Zirimund',		'bright',		'Otimizaçao/Adaptaçao Artistica',				'https://www.youtube.com/c/matheussilver',		'0xFFC30085'],
-	['LoreNYAW',		'lore',		'Coder/Builder',				'https://www.youtube.com/c/matheussilver',		'0xFFC30085'],
-	['ZavasSC',		'polybiusproxy',		'Sistema de customizaçao mobile',				'https://www.youtube.com/c/matheussilver',		'0xFF6475F3'],
-	['Discord',			'discord',			'nosso servidor do discord\n para atualizaçoes, projetos e\num pouco de zoeira',		'https://discord.gg/3c7ZP37FqX',		'0xFF4494E6'],
+	['Vs Natsuki'],
+	['Natsuki',		'silver',		'Coder/Diretor do projeto',					'https://youtube.com/channel/UCb0zxSI-rXrI1sJ9YPZxigg',	'0xFFFFFFFF'],
+	['DC Wars',		'bright',		'Sprite Da Monika/Natsuki Phase 3',				'https://youtube.com/c/DCwars',		'0xFFC30085'],
+	['EdwardThePro',		'lore',		'Musicas Do Capítulo 1 e 2/Artes',				'https://youtube.com/channel/UCi_aaLFl3-w0XvCDUAU5ZaA',		'0xFFC30085'],
+	['GamesRF',		'polybiusproxy',		'Musicas Do Capítulo 3/Extras',				'https://youtube.com/c/GamesRF',		'0xFF6475F3'],
+	['NuggetXD',			'discord',			'Ajuda',		'https://youtube.com/channel/UCo5DMnWx1GflsHMlM7RAVEQ',		'0xFF4494E6'],
+        ['ToTs',		'silver',		'Ajuda',					'https://youtube.com/channel/UCwlks1N11lDGdG85V-Q8nEQ',	'0xFFFFFFFF'],
+	['Haru Bits',		'bright',		'Beta Tester Do Mod',				'https://youtube.com/c/HaruBitsHelloDude',		'0xFFC30085'],
 	[''],
-	['ovo traduzi o resto nao kek'],
-	['Psych Engine'],
-	['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	'0xFFFFDD33'],
-	['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		'0xFFC30085'],
+	['Agradecimentos'],
+	['Matheus Silver',			'riveroaken',		'Criador Da BS Engine',			'https://youtube.com/c/MatheusSilver',		'0xFFC30085'],
+
+        
+	['Team Salvato',		'shadowmario',		'Criadores Do DDLC',					'https://youtube.com/c/TeamSalvato',	'0xFFFFDD33'],
+	['CelShader',			'riveroaken',		'Criador Do Mod DDTO',				'https://youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ',		'0xFFC30085'],
 	[''],
-	['Kade Engine'],
-	['KadeDev',		'polybiusproxy',		'Serio que ele criou a \nKade Engine?',					'https://twitter.com/Shadow_Mario_',	'0xFFFFDD33'],
-	[''],
-	['Artes de Loading'],
-	['Obi Mas',				'polybiusproxy',			'Arte week 1',						'https://youtube.com/channel/UCCMLK-5Stp4ICjhLeIhgNCw',			'0xFF4494E6'],
-	['FluorArt',		'polybiusproxy',	'Arte week 2',						'https://mobile.twitter.com/FluorArt',	'0xFFE01F32'],
-	['LilartFrayPostin',			'polybiusproxy',			'Arte week 3',				' kek',			'0xFFFF9300'],
-	['travsaus',				'polybiusproxy',			'Arte week 5',							'https://travsaus.newgrounds.com/',			'0xFFFFFFFF'],
-	['niceglitch',			'polybiusproxy',		'Arte week 6',		'https://mobile.twitter.com/niceglitch',	'0xFFD10616'],
-	[''],
-	['Engine Contributors'],
-	['shubs',				'shubs',			'New Input System Programmer',						'https://twitter.com/yoshubs',			'0xFF4494E6'],
-	['gedehari',			'gedehari',			'Chart Editor\'s Sound Waveform base',				'https://twitter.com/gedehari',			'0xFFFF9300'],
-	['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			'0xFFFFFFFF'],
-	['SandPlanet',			'sandplanet',		'Mascot\'s Owner\nMain Supporter of the Engine',		'https://twitter.com/SandPlanetNG',	'0xFFD10616'],
-	['bubba',				'bubba',		'Guest Composer for "Hot Dilf"',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',	'0xFF61536A'],
-	[''],
-	["Funkin' Crew"],
-	['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	'0xFFF73838'],
-	['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	'0xFFFFBB1B'],
-	['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			'0xFF53E52C'],
-       	['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		'0xFF6475F3']
-	['undertale team yeah yeah cool'],
-	['TemmieChang',			'TemmieChang',			"artista de undertale e outras budegas la man'",				'https://twitter.com/tuyoki',			'0xFF53E52C'],
-	['TobyFox',			'TobyFox',			"criador \nCompositor e outras coisas de undertale'",				'https://twitter.com/tobyfox',			'0xFF53E52C'],
+
 ];
 
 	var bg:FlxSprite;
